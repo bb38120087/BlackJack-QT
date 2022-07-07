@@ -26,38 +26,4 @@ public class GUI extends JFrame {
 	JButton bYes = new JButton();
 	JButton bNo = new JButton();
 	
-	public GUI() {
-		this.setSize(aW+6, aH+29);
-		this.setTitle("BlackJack");
-		this.setVisible(true);
-		this.setResizable(false);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		Board board = new Board();
-		this.setContentPane(board);
-		
-		bHit.setBounds(400, 400, 120, 80);
-		bHit.setBackground(colorButton);
-		bHit.setFont(fontButton);
-		bHit.setText("HIT");
-		board.add(bHit);
-		this.setLayout(null);
-	}
 	
-	public class Board extends JPanel {
-		public void paintComponent(Graphics g) {
-			g.setColor(colorBackground);
-			g.fillRect(0, 0, aW, aH);
-		}
-	}
-	
-	public class ActHit implements ActionListener {
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO 自動生成されたメソッド・スタブ
-			
-		}
-		
-	}
-}
